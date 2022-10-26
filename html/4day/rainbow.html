@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Document</title>
+    <style>
+        #box{background-color: gray; padding: 5px; width: 100px;}
+        .d{ 
+            width: 100px;
+            height: 100px;
+        }
+        #div1{background-color: red;}
+        #div2{background-color: orange;}
+        #div3{background-color: yellow;}
+        #div4{background-color: green;}
+        #div5{background-color: blue;}
+        #div6{background-color: navy;}
+        #div7{background-color: purple;}
+    </style>
+</head>
+<body id="b">
+    <div id="box">
+        <div id="div1" class="d" onclick="color('red')"></div>
+        <div id="div2" class="d" onclick="color('orange')"></div>
+        <div id="div3" class="d" onclick="color('yellow')"></div>
+        <div id="div4" class="d" onclick="color('green')"></div>
+        <div id="div5" class="d" onclick="color('blue')"></div>
+        <div id="div6" class="d" onclick="color('navy')"></div>
+        <div id="div7" class="d" onclick="color('purple')"></div>
+    </div>
+</body>
+<script>
+    function color(color){
+        document.getElementById("b").style.backgroundColor = color;
+    }
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>1부터 특정 수까지의 합</legend>
+        첫번째 수 : <input type="number" id="num1" autofocus>
+        두번째 수 : <input type="number" id="num2">
+        세번째 수 : <input type="number" id="num3">
+        <input type="button" value="구하기" onclick="sum()">
+        <h1 id="result"></h1>
+    </fieldset>
+</body>
+<script>
+    function sum(){
+        const n1 = Number(document.getElementById("num1").value); // 변수값 n1 에 id num 값 가져오기
+        const n2 = Number(document.getElementById("num2").value);
+        const n3 = Number(document.getElementById("num3").value);
+        let sum = 0;
+        for(let i=n1; i<=n2; i++){ // n1부터 n2까지 더하기 이므로 시작값 n1
+                sum = sum + i;
+        }
+            document.getElementById("result").innerHTML = sum;
+    }
+</script>
+</html>
+

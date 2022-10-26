@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>좋아하는 계절</legend>
+        <h3>[1]봄 [2]여름 [3]가을 [4]겨울</h3>
+        <input type="text" id="season">
+        <input type="button" value="click" onclick="season()">
+        <h1 id="result"></h1>
+    </fieldset>
+</body>
+<script>
+    function season(){
+        const num = document.getElementById("season").value;
+        if(num == 1){ // = 와 ==의 차이
+            document.getElementById("result").innerHTML = "좋아하는 계절은 봄 입니다.";
+        }else if(num == 2){
+            document.getElementById("result").innerHTML = "좋아하는 계절은 여름 입니다.";
+        }else if(num == 3){
+            document.getElementById("result").innerHTML = "좋아하는 계절은 가을 입니다.";
+        }else if(num == 4){ 
+            document.getElementById("result").innerHTML = "좋아하는 계절은 겨울 입니다.";
+        }
+    }
+</script>
+</html>
+
+<!--  -->

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body> 
+    <fieldset>
+        <legend>학점구하기</legend>
+        국어 : <input type="number" id="kor">
+        영어 : <input type="number" id="eng">
+        수학 : <input type="number" id="mat">
+        <input type="button" value="구하기" onclick="grade()">
+        <h1 id="result"></h1> 
+    </fieldset>
+</body>
+<script>
+    function grade(){
+        const kor = Number(document.getElementById("kor").value);
+        const eng = Number(document.getElementById("eng").value);
+        const mat = Number(document.getElementById("mat").value);
+        const avg = (kor+eng+mat)/3;
+        
+        if(avg >= 90){
+            document.getElementById("result").innerHTML = "평균은 "+avg+"이고 학점은 A 입니다.";
+            if(avg >= 95){
+                document.getElementById("result").innerHTML = "평균은 "+avg+"이고 학점은 A+ 입니다.";
+                if(avg >= 98){
+                    document.getElementById("result").innerHTML = "평균은 "+avg+"이고 학점은 A++ 입니다.";
+                }
+            }
+        }else if(avg >= 80){
+            document.getElementById("result").innerHTML = "평균은 "+avg+"이고 학점은 B 입니다.";
+            if(avg >= 85){
+                document.getElementById("result").innerHTML = "평균은 "+avg+"이고 학점은 B+ 입니다.";
+            }
+        }else if(avg >= 70){
+            document.getElementById("result").innerHTML = "평균은 "+avg+"이고 학점은 C 입니다.";
+            if(avg >= 75){
+                document.getElementById("result").innerHTML = "평균은 "+avg+"이고 학점은 C+ 입니다.";
+            }
+        }else if(avg >= 60){
+            document.getElementById("result").innerHTML = "평균은 "+avg+"이고 학점은 D 입니다.";
+            if(avg >= 65){
+                document.getElementById("result").innerHTML = "평균은 "+avg+"이고 학점은 D+ 입니다.";
+            }
+        }else{
+            document.getElementById("result").innerHTML = "평균은 "+avg+"이고 학점은 F 입니다.";
+        }
+    }
+</script>
+</html>
+<!--  -->

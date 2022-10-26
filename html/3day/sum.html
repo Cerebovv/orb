@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>두 수의 합 구하기</legend>
+        첫번째 수 : <input type="number" id="num1">
+        두번째 수 : <input type="number" id="num2">
+        <input type="button" value="구하기" onclick="sum()"> <!-- onclick 함수 실행 조건 부여 -->
+        <h1 id="result"></h1>
+    </fieldset>
+</body>
+<script>
+    function sum(){ // 함수에는 항상 소괄호()
+        const num1 = Number(document.getElementById("num1").value); // Number 대소문자 구분 필요
+        const num2 = Number(document.getElementById("num2").value); // Number 대소문자 구분 필요
+        const sum = num1+num2; // num1, num2, sum 각각 데이터를 변수에 저장해야 하므로 모두 선언 해야함
+        document.getElementById("result").innerHTML = "두 수의 합은 "+(num1+num2)+"입니다"; // (num1+num2) 혹은 합계 변수 선언해서 sum 사용가능
+    }
+    
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body> 
+    <fieldset>
+        <legend>학점구하기</legend>
+        <input type="number" id="score">
+        <input type="button" value="구하기" onclick="grade()">
+        <h1 id="result"></h1> 
+    </fieldset>
+</body>
+<script>
+    function grade(){
+        const score = document.getElementById("score").value;
+        if(score >= 90){
+            document.getElementById("result").innerHTML = "학점은 A 입니다.";
+            if(score >= 95){
+                document.getElementById("result").innerHTML = "학점은 A+ 입니다.";
+                if(score >= 98){
+                    document.getElementById("result").innerHTML = "학점은 A++ 입니다.";
+                }
+            }
+        }else if(score >= 80){
+            document.getElementById("result").innerHTML = "학점은 B 입니다.";
+            if(score >= 85){
+                document.getElementById("result").innerHTML = "학점은 B+ 입니다.";
+            }
+        }else if(score >= 70){
+            document.getElementById("result").innerHTML = "학점은 C 입니다.";
+            if(score >= 75){
+                document.getElementById("result").innerHTML = "학점은 C+ 입니다.";
+            }
+        }else if(score >= 60){
+            document.getElementById("result").innerHTML = "학점은 D 입니다.";
+            if(score >= 65){
+                document.getElementById("result").innerHTML = "학점은 D+ 입니다.";
+            }
+        }else{
+            document.getElementById("result").innerHTML = "학점은 F 입니다.";
+        }
+    }
+</script>
+</html>
+<!--  -->
